@@ -2,8 +2,11 @@ import java.util.Scanner;
 
 public class Runner {
     public static void main(String[] args) {
-        Caro caro = new Caro();
         Scanner sc = new Scanner(System.in);
+        System.out.print("nhập kích cỡ của bàn cờ (min: 3): ");
+        int size = sc.nextInt();
+        Caro caro = new Caro(size);
+
         while (0 < 1) {
             printer(caro);
             System.out.println("người chơi " + caro.getCurrentTurn() + ": ");

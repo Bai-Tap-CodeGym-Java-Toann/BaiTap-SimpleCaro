@@ -3,7 +3,11 @@ public class Caro {
     private String currentTurn = "X";
 
     public Caro(int size) {
-        this.map = mapGenerator(size);
+        if (size > 0) {
+            this.map = mapGenerator(size);
+        } else {
+            this.map = mapGenerator(3);
+        }
     }
 
     public Caro() {
@@ -13,7 +17,8 @@ public class Caro {
     public String[][] getMap() {
         return this.map;
     }
-    public String getCurrentTurn(){
+
+    public String getCurrentTurn() {
         return currentTurn;
     }
 
